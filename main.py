@@ -155,8 +155,7 @@ if selected == 'About us':
 if selected == 'Pregnancy Risk Prediction':
     st.title('Pregnancy Risk Prediction')
     content = "Predicting the risk in pregnancy involves analyzing several parameters, including age, blood sugar levels, blood pressure, and other relevant factors. By evaluating these parameters, we can assess potential risks and make informed predictions regarding the pregnancy's health."
-    st.markdown(f"<div style='white-space: pre-wrap;'><b>{
-                content}</b></div></br>", unsafe_allow_html=True)
+    st.markdown(f"<div style='white-space: pre-wrap;'><b>{content}</b></div></br>", unsafe_allow_html=True)
 
     # Input fields for user data
     age = st.text_input('Age of the Person', key="age")
@@ -262,8 +261,7 @@ elif selected == "Dashboard":
         api_key}&format=csv"
     st.header("Dashboard")
     content = "Our interactive dashboard offers a comprehensive visual representation of maternal health achievements across diverse regions. The featured chart provides insights into the performance of each region concerning institutional deliveries compared to their assessed needs. It serves as a dynamic tool for assessing healthcare effectiveness, allowing users to quickly gauge the success of maternal health initiatives."
-    st.markdown(f"<div style='white-space: pre-wrap;'><b>{
-                content}</b></div></br>", unsafe_allow_html=True)
+    st.markdown(f"<div style='white-space: pre-wrap;'><b>{content}</b></div></br>", unsafe_allow_html=True)
 
     dashboard = MaternalHealthDashboard(api_endpoint)
     dashboard.create_bubble_chart()
