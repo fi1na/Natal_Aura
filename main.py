@@ -23,8 +23,7 @@ class MaternalHealthDashboard:
                 data = pd.read_csv(StringIO(response.text))
                 return data
             else:
-                st.error(f"Failed to fetch data. Status code: {
-                         response.status_code}")
+                st.error(f"Failed to fetch data. Status code: {response.status_code}")
                 return None
         except requests.exceptions.RequestException as e:
             st.error(f"Error during API request: {e}")
@@ -198,8 +197,7 @@ if selected == 'Pregnancy Risk Prediction':
 elif selected == 'Fetal Health Prediction':
     st.title('Fetal Health Prediction')
     content = "Cardiotocograms (CTGs) are a simple and cost accessible option to assess fetal health, allowing healthcare professionals to take action in order to prevent child and maternal mortality"
-    st.markdown(f"<div style='white-space: pre-wrap;'><b>{
-                content}</b></div></br>", unsafe_allow_html=True)
+    st.markdown(f"<div style='white-space: pre-wrap;'><b>{content}</b></div></br>", unsafe_allow_html=True)
 
     # Input fields for fetal health prediction
     BaselineValue = st.text_input('Baseline Value')
