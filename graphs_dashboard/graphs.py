@@ -17,8 +17,7 @@ class MaternalHealthDashboard:
                 data = pd.read_csv(StringIO(response.text))
                 return data
             else:
-                st.error(f"Failed to fetch data. Status code: {
-                         response.status_code}")
+                st.error(f"Failed to fetch data. Status code: {response.status_code}")
                 return None
         except requests.exceptions.RequestException as e:
             st.error(f"Error during API request: {e}")
@@ -106,8 +105,7 @@ Hovering over a slice provides additional information, such as the name of the s
 
 if __name__ == "__main__":
     api_key = "579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b"
-    api_endpoint = f"https://api.data.gov.in/resource/50d3f87b-2a39-4611-ad69-7d5a44779d79?api-key={
-        api_key}&format=csv"
+    api_endpoint = f"https://api.data.gov.in/resource/50d3f87b-2a39-4611-ad69-7d5a44779d79?api-key={api_key}&format=csv"
     dashboard = MaternalHealthDashboard(api_endpoint)
 
     if dashboard.maternal_health_data is not None:
